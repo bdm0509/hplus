@@ -38,4 +38,8 @@ awsconfiguration.json
 amplifyconfiguration.json
 amplify-build-config.json
 amplify-gradle-config.json
+<<<<<<< HEAD
 amplifytools.xcconfig
+=======
+amplifytools.xcconfig
+>>>>>>> 76abb5a793d2466d74654cd359c760ee4e7f98c2
