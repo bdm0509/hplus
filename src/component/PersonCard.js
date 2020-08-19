@@ -8,7 +8,7 @@ const PersonCard = ({ dynamicSlug, fullName, title, description }) => {
         <h3 className="card-name">{fullName}</h3>
         <h4 className="card-title">{title}</h4>
       </div>
-      <p className="card-text">{description}</p>
+      <p className="card-text" dangerouslySetInnerHTML={{__html: description}} />
     </div>
   );
 }
