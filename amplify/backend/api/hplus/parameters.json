@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "hplus",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authhplus9ecd6b03",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

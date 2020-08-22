@@ -1,6 +1,23 @@
 import React from 'react';
+import { API, graphqlOperation } from 'aws-amplify';
 import ProductItem from './ProductItem';
-import productData from './data/products.json'
+// import productData from './data/products.json'
+
+const listProducts = `
+  query ListProducts {
+    listProducts {
+      items {
+        id
+        dynamicSlug
+        productName
+      }
+    }
+  }
+`;
+
+const productData = await API.graphql(
+  graphqlOperation(listProducts)
+);
 
 const Products = () => {
   return (

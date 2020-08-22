@@ -10,6 +10,11 @@
             "StackName": "amplify-hplus-dev-194016",
             "StackId": "arn:aws:cloudformation:us-east-1:870769913774:stack/amplify-hplus-dev-194016/63c59150-e0eb-11ea-9a2f-0e69ad9c0ded",
             "AmplifyAppId": "d1h8yudk67fibz"
+        },
+        "categories": {
+            "auth": {
+                "hplus9ecd6b03": {}
+            }
         }
     }
 }
