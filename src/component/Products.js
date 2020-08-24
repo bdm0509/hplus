@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { API, graphqlOperation } from 'aws-amplify';
 import ProductItem from './ProductItem';
 // import productData from './data/products.json'
@@ -15,11 +15,20 @@ const listProducts = `
   }
 `;
 
-const productData = await API.graphql(
-  graphqlOperation(listProducts)
-);
-
 const Products = () => {
+  const [productList, setProductList] = useState([]);
+
+  const fetchProducts = await() => {
+    const productData = API.graphql(
+      graphqlOperation(listProducts)
+    );
+    setProductList(response);
+  }
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
   return (
     <section id="products" className="section">
       <header className="imageheader"></header>
